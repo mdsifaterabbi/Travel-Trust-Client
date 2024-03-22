@@ -1,0 +1,144 @@
+.myRightArrowStyle {
+  font-size: 20px;
+  color: #ffffff;
+  background: purple;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  /* line-height: 130px; */
+  cursor: default;
+  position: relative;
+  top: -200px;
+  left: 90%;
+}
+
+.myLeftArrowStyle {
+  font-size: 20px;
+  color: #ffffff;
+  background: purple;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  /* line-height: 130px; */
+  cursor: default;
+  position: relative;
+  top: 200px;
+  left: 50px;
+  z-index: 100;
+}
+
+.myLeftArrowStyle:hover {
+  cursor: pointer;
+}
+.myRightArrowStyle:hover {
+  cursor: pointer;
+}
+
+/* ================ For Extra Extra large device XXL ======================== */
+@media (min-width: 1600px) {
+  .myRightArrowStyle {
+    left: 88%;
+  }
+  .myLeftArrowStyle {
+    left: 5%;
+  }
+}
+
+/* ================ For Extra large device ===================== */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .myRightArrowStyle {
+    left: 85%;
+  }
+  .myLeftArrowStyle {
+    left: 5%;
+  }
+}
+
+/* ============== For large Devices ============== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .myRightArrowStyle {
+    left: 85%;
+  }
+  .myLeftArrowStyle {
+    left: 5%;
+  }
+}
+
+/* ==================== For Medium Device ================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .myRightArrowStyle {
+    top: -170px;
+    left: 80vw;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+  }
+  .myLeftArrowStyle {
+    top: 170px;
+    left: 8vw;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+  }
+}
+
+/* ============== For small Device 640px to 767px ================== */
+@media (min-width: 640px) and (max-width: 767px) {
+  .myRightArrowStyle {
+    top: -170px;
+    left: 80vw;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+  }
+  .myLeftArrowStyle {
+    top: 170px;
+    left: 8vw;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+  }
+}
+
+/* ================== For extra small device (2) let 400px to 639px ================*/
+@media (min-width: 400px) and (max-width: 639px) {
+  .myRightArrowStyle {
+    top: -150px;
+    left: 85vw;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
+  .myLeftArrowStyle {
+    top: 160px;
+    left: 3vw;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
+}
+/* ================== For extra small device (1) let 200px to 399px ================*/
+@media (min-width: 200px) and (max-width: 399px) {
+  .myRightArrowStyle {
+    top: -150px;
+    left: 80vw;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
+  .myLeftArrowStyle {
+    top: 160px;
+    left: 1vw;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
+}
