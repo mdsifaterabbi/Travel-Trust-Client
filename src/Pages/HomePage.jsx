@@ -1,6 +1,7 @@
 import Hero from "../Components/Hero";
 import HomeSection2 from "../Components/HomeSection2";
 import HomeSection3 from "../Components/HomeSection3";
+import HomeSection4 from "../Components/HomeSection4";
 import Menu from "../Components/Menu";
 
 const HomePage = () => {
@@ -19,6 +20,10 @@ const HomePage = () => {
 
       <div className="w-[80vw] mx-auto py-[20px]">
         <HomeSection3 />
+      </div>
+
+      <div className="w-[90vw] mx-auto">
+        <HomeSection4 />
       </div>
 
       <div className="w-[100vw] md:w-[90vw] border-[2px] border-red-500 mx-auto py-[200px] mt-[20px]">
