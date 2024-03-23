@@ -12,7 +12,7 @@ const HomePage = () => {
         <Hero />
       </div>
 
-      <div className="md:w-[98vw] lg:w-[90vw] xl:w-[70vw] mx-auto">
+      <div className="w-[98vw] md:w-[98vw] lg:w-[90vw] xl:w-[70vw] mx-auto">
         <HomeSection2 />
       </div>
 

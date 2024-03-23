@@ -42,6 +42,23 @@ const HomeSection2 = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
+  const settings4_XSM = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+  const settings4_SM = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
   const sliderContents = [
     {
       id: 1,
@@ -207,8 +224,8 @@ const HomeSection2 = () => {
 
   return (
     <>
-      <div className="flex lg:flex-row xl:flex-row md:flex-wrap">
-        <div className="md:basis-1/1 md:w-[98vw] lg:basis-1/4 xl:basis-1/4">
+      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row md:flex-wrap">
+        <div className="basis-1/1 md:basis-1/1 lg:basis-1/4 xl:basis-1/4">
           <div className="">
             <h1 className="text-center py-[10px] text-[20px]">Excellent</h1>
             <div className="flex gap-1 justify-center py-[5px]">
@@ -229,10 +246,9 @@ const HomeSection2 = () => {
             </div>
           </div>
         </div>
-        <div className="md:basis-1/1 md:w-[98vw] lg:basis-3/4 xl:basis-3/4">
-          <div className="md:w-[600px] lg:w-[600px] xl:w-[600px] mx-auto">
-            
-            <div className="slider-container">
+        <div className="basis-1/1 md:basis-1/1 lg:basis-3/4 xl:basis-3/4">
+          <div className="w-[98vw] md:w-[600px] lg:w-[600px] xl:w-[600px] mx-auto">
+            <div className="slider-container hidden md:block lg:block xl:block">
               <Slider {...settings}>
                 {sliderContents.map((sc, index) => (
                   <div key={index}>
@@ -265,6 +281,110 @@ const HomeSection2 = () => {
                   </div>
                 ))}
               </Slider>
+              <div className="flex py-[10px]">
+                <p className="mr-[10px]">Check out our 2,414 reviews</p>
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="text-[#00b67a] w-[35px] h-[35px] px-[5px] py-[0px] mx-[2px] relative top-[-5px]" />
+                <p className="mr-[10px] font-bold text-[20px]">Travel Trust</p>
+              </div>
+            </div>
+            <div className="slider-container w-[90%] mx-auto block sm:hidden md:hidden">
+              <Slider {...settings4_XSM}>
+                {sliderContents.map((sc, index) => (
+                  <div key={index}>
+                    <div className="flex gap-1 justify-start py-[5px] mb-[20px]">
+                      {sc.icons}
+                      <span>
+                        {sc.status ? (
+                          <div>
+                            <MdVerified className="inline w-[20px] h-[20px] mt-[5px]" />
+                            <span className="relative top-[5px] left-[3px]">
+                              Verified
+                            </span>
+                          </div>
+                        ) : (
+                          ""
+                        )}
+                      </span>
+                    </div>
+                    <p className="font-semibold text-[18px]">{sc.heading}</p>
+                    <p className="text-[14px] pt-[5px]">{sc.paragraph}</p>
+                    <span className="text-[#717172] text-[12px] font-bold">
+                      {sc.footer1}
+                      <span className="text-[#99999b] text-[12px] px-[2px] font-normal">
+                        {sc.date}
+                      </span>
+                    </span>
+                    <p className="text-[14px] pt-[5px] font-semibold">
+                      {sc.footer2}
+                    </p>
+                  </div>
+                ))}
+              </Slider>
+              <div className="py-[10px] mt-[30px] w-[80vw] mx-auto">
+                <p className="text-center">Check out our 2,414 reviews</p>
+                <div className="text-center">
+                  <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] inline mx-[2px]" />
+                  <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] inline mx-[2px]" />
+                  <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] inline mx-[2px]" />
+                  <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] inline mx-[2px]" />
+                  <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] inline mx-[2px]" />
+                </div>
+                <div className="text-center">
+                  <BsStarHalf className="text-[#00b67a] w-[35px] h-[35px] px-[5px] py-[0px] mx-[2px] inline" />
+                  <p className="font-bold text-[20px] inline relative top-[5px]">
+                    Travel Trust
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="slider-container py-[50px] w-[90%] mx-auto hidden sm:block md:hidden">
+              <Slider {...settings4_SM}>
+                {sliderContents.map((sc, index) => (
+                  <div key={index} className="mb-[20px]">
+                    <div className="flex gap-1 justify-start py-[5px]">
+                      {sc.icons}
+                      <span>
+                        {sc.status ? (
+                          <div>
+                            <MdVerified className="inline w-[20px] h-[20px] mt-[5px]" />
+                            <span className="relative top-[5px] left-[3px]">
+                              Verified
+                            </span>
+                          </div>
+                        ) : (
+                          ""
+                        )}
+                      </span>
+                    </div>
+                    <p className="font-semibold text-[18px]">{sc.heading}</p>
+                    <p className="text-[14px] pt-[5px]">{sc.paragraph}</p>
+                    <span className="text-[#717172] text-[12px] font-bold">
+                      {sc.footer1}
+                      <span className="text-[#99999b] text-[12px] font-normal">
+                        {sc.date}
+                      </span>
+                    </span>
+                    <p className="text-[14px] pt-[5px] font-semibold">
+                      {sc.footer2}
+                    </p>
+                  </div>
+                ))}
+              </Slider>
+              <div className="flex py-[10px] mt-[30px] w-[80vw] mx-auto">
+                <p className="mr-[10px]">Check out our 2,414 reviews</p>
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="bg-[#00b67a] text-white w-[25px] h-[25px] px-[5px] py-[5px] mx-[2px]" />
+                <BsStarHalf className="text-[#00b67a] w-[35px] h-[35px] px-[5px] py-[0px] mx-[2px] relative top-[-5px]" />
+                <p className="mr-[10px] font-bold text-[20px]">Travel Trust</p>
+              </div>
             </div>
           </div>
         </div>
