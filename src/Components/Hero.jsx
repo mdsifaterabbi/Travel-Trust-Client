@@ -36,8 +36,8 @@ const Hero = () => {
     waitForAnimate: false,
 
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
+    speed: 4000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
 
     nextArrow: <SampleNextArrow />,
@@ -46,24 +46,32 @@ const Hero = () => {
   const heroSliderContents = [
     {
       id: 1,
+      bgImage: "./homePage/banner_image_1.png",
+      alt: "banner_image_1",
       heading: "Visa & Passport Agency 1",
       subTitle:
         "Don’t let a little thing like paperwork stop you from enjoying your travels",
     },
     {
       id: 2,
+      bgImage: "./homePage/banner_image_2.png",
+      alt: "banner_image_2",
       heading: "Visa & Passport Agency 2",
       subTitle:
         "Don’t let a little thing like paperwork stop you from enjoying your travels",
     },
     {
       id: 3,
+      bgImage: "./homePage/banner_image_3.png",
+      alt: "banner_image_3",
       heading: "Visa & Passport Agency 3",
       subTitle:
         "Don’t let a little thing like paperwork stop you from enjoying your travels",
     },
     {
       id: 4,
+      bgImage: "./homePage/temp2.jpg",
+      alt: "temp2",
       heading: "Visa & Passport Agency 4",
       subTitle:
         "Don’t let a little thing like paperwork stop you from enjoying your travels",
@@ -147,73 +155,83 @@ const Hero = () => {
     <>
       <div>
         <div
-          className={`slider-container w-[100vw] md:w-[98vw] lg:w-[98vw] xl:w-[98vw] mx-auto`}
+          className={`slider-container w-[100vw] md:w-[98vw] lg:w-[98vw] xl:w-[98vw] mx-auto mt-[-30px]`}
         >
           <Slider {...settings}>
             {heroSliderContents.map((s, index) => (
               <div
                 key={index}
-                className="border h-[300px] sm:h-[400px] lg:h-[470px]"
+                className={`h-[300px] sm:h-[400px] lg:h-[470px]`}
               >
-                <div className="w-[95vw] sm:w-[80vw] md:w-[80vw] md:py-[100px] lg:w-[80vw] mx-auto bg-orange-500 mt-[50px] py-[50px] sm:py-[50px] md:mt-[50px] lg:mt-[50px]">
-                  <h1 className="text-black text-center sm:text-center md:text-center lg:text-left xl:text-[40px]">
+                <div
+                  className={`relative top-0 left-0 w-[95vw] sm:w-[80vw] md:w-[80vw] md:py-[100px] lg:w-[80vw] xl:w-[80vw] xl:py-[200px] mx-auto py-[50px] sm:py-[100px]`}
+                  style={{
+                    backgroundImage: `url(${s.bgImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  {/* overlay creating */}
+                  <div className={`${stylesForHero.myBgGradient}`}></div>
+                  <h1 className="text-white relative text-center sm:text-center md:text-center lg:text-left xl:text-[40px]">
                     {s.heading}
                   </h1>
-                  <p className="text-center sm:text-center md:text-center lg:text-left xl:text-[22px]">
+                  <p className="text-white relative text-center sm:text-center md:text-center lg:text-left xl:text-[22px]">
                     {s.subTitle}
                   </p>
-                  <form
-                    onSubmit={handleSubmit((data) => console.log(data))}
-                    className="hidden sm:block md:block sm:text-center sm:mt-[50px] md:text-center lg:text-left md:mt-[50px]"
-                  >
-                    <select
-                      {...register("serviceOrDestination", {
-                        required: true,
-                      })}
-                      id="serviceOrDestination"
-                      className="md:mr-[15px] lg:mx-[30px] py-[10px] px-[10px]"
+                  <div className="absolute top-[55%] left-0 sm:w-[400px]">
+                    <form
+                      onSubmit={handleSubmit((data) => console.log(data))}
+                      className="hidden sm:block md:block sm:text-center sm:mt-[50px] md:text-center lg:text-left md:mt-[50px]"
                     >
-                      <option value="">Choose service or destination</option>{" "}
-                      <option className="font-bold text-black" disabled>
-                        Passport Services
-                      </option>
-                      {passportServices.map((ps) => (
-                        <option
-                          key={ps.id}
-                          value={ps.service}
-                          className={`${stylesForHero.MyOptions}`}
-                        >
-                          {ps.service}
+                      <select
+                        {...register("serviceOrDestination", {
+                          required: true,
+                        })}
+                        id="serviceOrDestination"
+                        className="md:mr-[15px] lg:mx-[30px] py-[10px] px-[10px]"
+                      >
+                        <option value="">Choose service or destination</option>{" "}
+                        <option className="font-bold text-black" disabled>
+                          Passport Services
                         </option>
-                      ))}
-                      <option className="font-bold text-black" disabled>
-                        Popular Travel Visas
-                      </option>
-                      {dropdownContents.map((dc) => (
-                        <option
-                          key={dc.id}
-                          value={dc.country}
-                          className={`${stylesForHero.MyOptions}`}
-                        >
-                          {dc.country}
+                        {passportServices.map((ps) => (
+                          <option
+                            key={ps.id}
+                            value={ps.service}
+                            className={`${stylesForHero.MyOptions}`}
+                          >
+                            {ps.service}
+                          </option>
+                        ))}
+                        <option className="font-bold text-black" disabled>
+                          Popular Travel Visas
                         </option>
-                      ))}
-                    </select>
-                    {errors.serviceOrDestination && (
-                      <p>Please select a service or destination.</p>
-                    )}
+                        {dropdownContents.map((dc) => (
+                          <option
+                            key={dc.id}
+                            value={dc.country}
+                            className={`${stylesForHero.MyOptions}`}
+                          >
+                            {dc.country}
+                          </option>
+                        ))}
+                      </select>
 
-                    <button className="btn btn-sm btn-info rounded-md">
-                      Submit
-                    </button>
-                  </form>
+                      <button className="btn btn-sm btn-info rounded-md ml-[10px]">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
                 </div>
+                
               </div>
             ))}
           </Slider>
         </div>
       </div>
-      <div className="block sm:hidden bg-sky-500 w-[90vw] mx-auto py-[20px]">
+      <div className="block sm:hidden w-[90vw] mx-auto mt-[-150px]">
         <form
           onSubmit={handleSubmit((data) => console.log(data))}
           className="text-center"
@@ -255,7 +273,9 @@ const Hero = () => {
             <p>Please select a service or destination.</p>
           )}
 
-          <button className="btn btn-sm btn-info rounded-md block mx-auto mt-[10px]">Submit</button>
+          <button className="btn btn-sm btn-info rounded-md block mx-auto mt-[10px]">
+            Submit
+          </button>
         </form>
       </div>
     </>

@@ -1,21 +1,19 @@
 .myRightArrowStyle {
   font-size: 20px;
   color: #ffffff;
-  background: purple;
+  background: rgba(109, 35, 35, 0.4);
   width: 130px;
   height: 130px;
   text-align: center;
-  /* line-height: 130px; */
+
   cursor: default;
   position: relative;
-  /* top: -200px;
-  left: 90%; */
 }
 
 .myLeftArrowStyle {
   font-size: 20px;
   color: #ffffff;
-  background: purple;
+  background: rgba(109, 35, 35, 0.4);
   width: 130px;
   height: 130px;
   text-align: center;
@@ -73,15 +71,15 @@
 /* ============== For large Devices ============== */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .myRightArrowStyle {
-    left: 90%;
-    bottom: 250px;
+    left: 91%;
+    bottom: 350px;
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
   .myLeftArrowStyle {
-    left: 5%;
-    bottom: -270px;
+    left: 4%;
+    bottom: -180px;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -91,7 +89,7 @@
 /* ==================== For Medium Device ================== */
 @media (min-width: 768px) and (max-width: 1023px) {
   .myRightArrowStyle {
-    bottom: 230px;
+    bottom: 300px;
     left: 90vw;
     width: 50px;
     height: 50px;
@@ -99,7 +97,7 @@
     font-size: 18px;
   }
   .myLeftArrowStyle {
-    bottom: -230px;
+    bottom: -150px;
     left: 2vw;
     width: 50px;
     height: 50px;
@@ -111,7 +109,7 @@
 /* ============== For small Device 640px to 767px ================== */
 @media (min-width: 640px) and (max-width: 767px) {
   .myRightArrowStyle {
-    bottom: 250px;
+    bottom: 300px;
     left: 90vw;
     width: 50px;
     height: 50px;
@@ -119,7 +117,7 @@
     font-size: 14px;
   }
   .myLeftArrowStyle {
-    bottom: -200px;
+    bottom: -150px;
     left: 2vw;
     width: 50px;
     height: 50px;
@@ -131,7 +129,7 @@
 /* ================== For extra small device (2) let 400px to 639px ================*/
 @media (min-width: 400px) and (max-width: 639px) {
   .myRightArrowStyle {
-    bottom: 200px;
+    bottom: 250px;
     left: 87vw;
     width: 50px;
     height: 50px;
@@ -139,7 +137,7 @@
     font-size: 12px;
   }
   .myLeftArrowStyle {
-    bottom: -150px;
+    bottom: -100px;
     left: 2vw;
     width: 50px;
     height: 50px;
@@ -150,15 +148,15 @@
 /* ================== For extra small device (1) let 200px to 399px ================*/
 @media (min-width: 200px) and (max-width: 399px) {
   .myRightArrowStyle {
-    bottom: 200px;
-    left: 83vw;
+    bottom: 250px;
+    left: 85vw;
     width: 50px;
     height: 50px;
     line-height: 50px;
     font-size: 12px;
   }
   .myLeftArrowStyle {
-    bottom: -150px;
+    bottom: -100px;
     left: 2vw;
     width: 50px;
     height: 50px;
