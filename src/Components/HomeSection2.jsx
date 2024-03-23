@@ -224,7 +224,7 @@ const HomeSection2 = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row md:flex-wrap">
+      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row md:flex-wrap sm:mt-[-100px] lg:mt-[-200px] xl:mt-[10px]">
         <div className="basis-1/1 md:basis-1/1 lg:basis-1/4 xl:basis-1/4">
           <div className="">
             <h1 className="text-center py-[10px] text-[20px]">Excellent</h1>

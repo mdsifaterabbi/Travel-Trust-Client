@@ -231,7 +231,7 @@ const Hero = () => {
           </Slider>
         </div>
       </div>
-      <div className="block sm:hidden w-[90vw] mx-auto mt-[-150px]">
+      <div className="block relative sm:hidden w-[90vw] mx-auto mt-[-150px]">
         <form
           onSubmit={handleSubmit((data) => console.log(data))}
           className="text-center"

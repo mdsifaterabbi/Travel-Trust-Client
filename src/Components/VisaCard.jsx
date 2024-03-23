@@ -52,16 +52,40 @@ const VisaCard = () => {
     slidesToScroll: 1,
   };
 
+  const settings4VisaCardXSM = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const settings4VisaCardSM = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
+  const settings4VisaCardMD = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
   return (
     <>
       <div className="w-[70vw] mx-auto">
-        <div className="slider-container">
+        {/* Only for large and extra large device */}
+        <div className="slider-container hidden lg:block xl:block">
           <Slider {...settings4VisaCard}>
             {visaCardContents.map((vc, index) => (
               <div key={index}>
                 <div className={`w-[90%] mx-auto`}>
                   <div
-                    className={`relative top-0 left-0 card w-[100%] h-[300px] bg-base-100 shadow-xl`}
+                    className={`relative top-0 left-0 card w-[100%] h-[300px] bg-base-100 shadow-xl rounded-none`}
                     style={{
                       backgroundImage: `url(${vc.bgImage})`,
                       backgroundSize: "cover",
@@ -77,12 +101,137 @@ const VisaCard = () => {
                       />
                     </figure>
                     <div className="card-body items-center text-center px-0">
-                      <h2 className="relative card-title text-white">{vc.heading}</h2>
+                      <h2 className="relative card-title text-white">
+                        {vc.heading}
+                      </h2>
+                      <p className="relative px-[5px] text-[12px] text-[#d4d2d2]">
+                        {vc.bodyText}
+                      </p>
+                      <div className="relative">
+                        <button className=" bg-[#044888] w-[150px] text-white border-none mt-[10px] py-[10px] font-semibold hover:bg-[#376b9b]">
+                          {vc.buttonText}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        {/* Only for extra small device */}
+        <div className="slider-container block sm:hidden md:hidden lg:hidden xl:hidden">
+          <Slider {...settings4VisaCardXSM}>
+            {visaCardContents.map((vc, index) => (
+              <div key={index}>
+                <div className={`w-[100%] mx-auto`}>
+                  <div
+                    className={`relative top-0 left-0 card w-[100%] h-[300px] bg-base-100 shadow-xl rounded-none`}
+                    style={{
+                      backgroundImage: `url(${vc.bgImage})`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    {/* overlay creating */}
+                    <div className={`${styles.myBgGradient}`}></div>
+                    <figure className="px-10 pt-10 relative">
+                      <img
+                        src={vc.flagUrl}
+                        alt={vc.alt}
+                        className="rounded-xl"
+                      />
+                    </figure>
+                    <div className="card-body items-center text-center px-0">
+                      <h2 className="relative card-title text-white">
+                        {vc.heading}
+                      </h2>
                       <p className="relative px-[5px] text-[12px] text-[#d4d2d2]">
                         {vc.bodyText}
                       </p>
                       <div className="relative">
                         <button className=" bg-[#044888] w-[200px] text-white border-none mt-[10px] py-[10px] font-semibold hover:bg-[#376b9b]">
+                          {vc.buttonText}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        {/* Only for small device */}
+        <div className="slider-container hidden sm:block md:hidden lg:hidden xl:hidden">
+          <Slider {...settings4VisaCardSM}>
+            {visaCardContents.map((vc, index) => (
+              <div key={index}>
+                <div className={`w-[95%] mx-auto`}>
+                  <div
+                    className={`relative top-0 left-0 card w-[100%] h-[300px] bg-base-100 shadow-xl rounded-none`}
+                    style={{
+                      backgroundImage: `url(${vc.bgImage})`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    {/* overlay creating */}
+                    <div className={`${styles.myBgGradient}`}></div>
+                    <figure className="px-10 pt-10 relative">
+                      <img
+                        src={vc.flagUrl}
+                        alt={vc.alt}
+                        className="rounded-xl"
+                      />
+                    </figure>
+                    <div className="card-body items-center text-center px-0">
+                      <h2 className="relative card-title text-white">
+                        {vc.heading}
+                      </h2>
+                      <p className="relative px-[5px] text-[12px] text-[#d4d2d2]">
+                        {vc.bodyText}
+                      </p>
+                      <div className="relative">
+                        <button className=" bg-[#044888] w-[200px] text-white border-none mt-[10px] py-[10px] font-semibold hover:bg-[#376b9b]">
+                          {vc.buttonText}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        {/* Only for medium device */}
+        <div className="slider-container hidden sm:hidden md:block lg:hidden xl:hidden">
+          <Slider {...settings4VisaCardMD}>
+            {visaCardContents.map((vc, index) => (
+              <div key={index}>
+                <div className={`w-[95%] mx-auto`}>
+                  <div
+                    className={`relative top-0 left-0 card w-[100%] h-[300px] bg-base-100 shadow-xl rounded-none`}
+                    style={{
+                      backgroundImage: `url(${vc.bgImage})`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    {/* overlay creating */}
+                    <div className={`${styles.myBgGradient}`}></div>
+                    <figure className="px-10 pt-10 relative">
+                      <img
+                        src={vc.flagUrl}
+                        alt={vc.alt}
+                        className="rounded-xl"
+                      />
+                    </figure>
+                    <div className="card-body items-center text-center px-0">
+                      <h2 className="relative card-title text-white">
+                        {vc.heading}
+                      </h2>
+                      <p className="relative px-[5px] text-[12px] text-[#d4d2d2]">
+                        {vc.bodyText}
+                      </p>
+                      <div className="relative">
+                        <button className=" bg-[#044888] w-[150px] text-white border-none mt-[10px] py-[10px] font-semibold hover:bg-[#376b9b]">
                           {vc.buttonText}
                         </button>
                       </div>
