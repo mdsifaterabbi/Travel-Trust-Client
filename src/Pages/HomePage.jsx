@@ -11,11 +11,11 @@ const HomePage = () => {
       <div className="">
         <Hero />
       </div>
-      <div className="xl:w-[95vw] mx-auto">
-        <div className="xl:w-[50vw] mx-auto">
-          <HomeSection2 />
-        </div>
+
+      <div className="md:w-[98vw] lg:w-[90vw] xl:w-[70vw] mx-auto">
+        <HomeSection2 />
       </div>
+
       <div className="w-[100vw] md:w-[90vw] border-[2px] border-red-500 mx-auto py-[200px] mt-[20px]">
         <h1>This is home page</h1>
         <p>Welcome to Travel Trust</p>

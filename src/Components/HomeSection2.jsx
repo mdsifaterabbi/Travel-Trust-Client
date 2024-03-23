@@ -207,32 +207,35 @@ const HomeSection2 = () => {
 
   return (
     <>
-      <div className="flex flex-row flex-wrap">
-        <div className="basis-1/4 border">
-          <h1 className="text-center py-[10px] text-[20px]">Excellent</h1>
-          <div className="flex gap-1 justify-center py-[5px]">
-            <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
-            <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
-            <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
-            <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
-            <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
-          </div>
-          <h5 className="text-center text-[14px] py-[10px]">
-            Based on <span className="underline">2,414 reviews</span>
-          </h5>
-          <div className="text-center">
-            <BsStarHalf className="text-[#00b67a] w-[30px] h-[30px] px-[5px] py-[5px] inline" />
-            <h4 className="inline font-bold text-[20px] relative top-[5px]">
-              Travel Trust
-            </h4>
+      <div className="flex lg:flex-row xl:flex-row md:flex-wrap">
+        <div className="md:basis-1/1 md:w-[98vw] lg:basis-1/4 xl:basis-1/4">
+          <div className="">
+            <h1 className="text-center py-[10px] text-[20px]">Excellent</h1>
+            <div className="flex gap-1 justify-center py-[5px]">
+              <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
+              <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
+              <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
+              <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
+              <BsStarHalf className="bg-[#00b67a] text-white w-[30px] h-[30px] px-[5px] py-[5px]" />
+            </div>
+            <h5 className="text-center text-[14px] py-[10px]">
+              Based on <span className="underline">2,414 reviews</span>
+            </h5>
+            <div className="text-center">
+              <BsStarHalf className="text-[#00b67a] w-[30px] h-[30px] px-[5px] py-[5px] inline" />
+              <h4 className="inline font-bold text-[20px] relative top-[5px]">
+                Travel Trust
+              </h4>
+            </div>
           </div>
         </div>
-        <div className="basis-3/4 border">
-          <div className="w-[100%]">
-            <div className="slider-container xl:w-[600px] mx-auto">
+        <div className="md:basis-1/1 md:w-[98vw] lg:basis-3/4 xl:basis-3/4">
+          <div className="md:w-[600px] lg:w-[600px] xl:w-[600px] mx-auto">
+            
+            <div className="slider-container">
               <Slider {...settings}>
-                {sliderContents.map((sc) => (
-                  <div className="border">
+                {sliderContents.map((sc, index) => (
+                  <div key={index}>
                     <div className="flex gap-1 justify-start py-[5px]">
                       {sc.icons}
                       <span>
