@@ -22,7 +22,7 @@ const HomePage = () => {
         <HomeSection3 />
       </div>
 
-      <div className="w-[90vw] mx-auto">
+      <div className="w-[98vw] sm:w-[98vw] md:w-[98vw] lg:w-[90vw] xl:w-[85vw] mx-auto my-[50px]">
         <HomeSection4 />
       </div>
 
