@@ -27,7 +27,7 @@ const HomePage = () => {
         <HomeSection4 />
       </div>
 
-      <div className="w-[70vw] mx-auto">
+      <div className="lg:w-[90vw] xl:w-[70vw] mx-auto">
         <HomeSection5 />
       </div>
 
