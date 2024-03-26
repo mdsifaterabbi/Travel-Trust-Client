@@ -77,7 +77,7 @@ const Footer1 = () => {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row flex-wrap ">
+      <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row flex-wrap relative z-50">
         <div className="basis-1/1 sm:basis-1/2 md:basis-1/2 lg:basis-1/2 xl:basis-1/2 bg-[#003f9f]">
           <div className="mt-[20px] mb-[-20px] sm:my-[30px] text-left w-[98%] sm:w-[87%] md:w-[95%] lg:w-[90%] xl:w-[70%] mx-auto">
             <p className="text-white font-bold text-center text-[14px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]">

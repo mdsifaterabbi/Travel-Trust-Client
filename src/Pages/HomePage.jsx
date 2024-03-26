@@ -1,4 +1,5 @@
 import Footer1 from "../Components/Footer1";
+import Footer2 from "../Components/Footer2";
 import Hero from "../Components/Hero";
 import HomeSection2 from "../Components/HomeSection2";
 import HomeSection3 from "../Components/HomeSection3";
@@ -34,6 +35,9 @@ const HomePage = () => {
 
       <div className="sm:w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] mx-auto">
         <Footer1 />
+      </div>
+      <div className="w-[98vw] mx-auto xl:mt-[-50px] bg-[#d1e3ff] lg:hidden xl:block">
+        <Footer2 />
       </div>
       <div className="py-[100px]">
         <h1>This is home page</h1>
