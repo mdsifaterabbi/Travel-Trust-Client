@@ -1,3 +1,4 @@
+import Footer1 from "../Components/Footer1";
 import Hero from "../Components/Hero";
 import HomeSection2 from "../Components/HomeSection2";
 import HomeSection3 from "../Components/HomeSection3";
@@ -27,14 +28,15 @@ const HomePage = () => {
         <HomeSection4 />
       </div>
 
-      <div className="w-[98vw] sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[70vw] mx-auto">
+      <div className="w-[98vw] sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[70vw] mx-auto mb-[50px]">
         <HomeSection5 />
       </div>
 
-      <div className="w-[100vw] md:w-[90vw] border-[2px] border-red-500 mx-auto py-[200px] mt-[20px]">
+      <div className="sm:w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] mx-auto">
+        <Footer1 />
+      </div>
+      <div className="py-[100px]">
         <h1>This is home page</h1>
-        <p>Welcome to Travel Trust</p>
-        <span className="text-green-500">Bring The Happyness</span>
       </div>
     </>
   );
