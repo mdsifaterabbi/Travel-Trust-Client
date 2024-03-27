@@ -36,7 +36,7 @@ const HomePage = () => {
       <div className="sm:w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] mx-auto">
         <Footer1 />
       </div>
-      <div className="w-[98vw] mx-auto xl:mt-[-50px] bg-[#d1e3ff] lg:hidden xl:block">
+      <div className="w-[98vw] mx-auto mt-[-50px] sm:mt-[-50px] md:mt-[-50px] lg:mt-[-50px] xl:mt-[-50px] bg-[#d1e3ff] block sm:block md:block lg:block xl:block">
         <Footer2 />
       </div>
       <div className="py-[100px]">
