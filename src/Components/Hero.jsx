@@ -153,9 +153,9 @@ const Hero = () => {
 
   return (
     <>
-      <div>
+      <div className="overflow-hidden">
         <div
-          className={`slider-container w-[100vw] md:w-[98vw] lg:w-[98vw] xl:w-[98vw] mx-auto mt-[-30px]`}
+          className={`slider-container w-[98vw] md:w-[98vw] lg:w-[98vw] xl:w-[98vw] mx-auto mt-[-30px]`}
         >
           <Slider {...settings}>
             {heroSliderContents.map((s, index) => (
