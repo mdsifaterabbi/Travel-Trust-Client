@@ -7,16 +7,16 @@ const Menu = () => {
       <div className="xl:w-[80vw] xl:mx-auto">
         <div className="navbar bg-base-100 pt-[10px] pb-[20px]">
           <div className="navbar-start hidden lg:flex">
-            <Link to="/home" className="btn btn-ghost text-xl">
+            <Link to="/home" className="text-xl">
               <img
-                src="../Logo.png"
-                alt="logo-lg"
-                className="lg:w-[150px]"
+                src="./homePage/Logo_Travel_Trust.png"
+                alt="Logo_Travel_Trust"
+                className=""
               ></img>
             </Link>
           </div>
 
-          <div className="lg:navbar-center xl:navbar-end hidden lg:flex">
+          <div className="lg:navbar-center xl:navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <Link to="/service">Passport</Link>
@@ -48,7 +48,11 @@ const Menu = () => {
             <div className="block lg:hidden absolute left-0 w-[150px]">
               <a className="btn btn-ghost text-[14px]">
                 <Link to="/home" className="text-[16px]">
-                  <img src="../Logo.png" alt="logo-xsm" className=""></img>
+                  <img
+                    src="./homePage/Logo_Travel_Trust.png"
+                    alt="Logo_Travel_Trust"
+                    className=""
+                  ></img>
                 </Link>
               </a>
             </div>
