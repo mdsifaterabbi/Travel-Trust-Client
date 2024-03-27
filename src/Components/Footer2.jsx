@@ -24,7 +24,9 @@ const Footer2 = () => {
         <div className="flex mx-auto w-[90vw] sm:w-[70vw] md:hidden mt-[20px] sm:mt-[10px]">
           <div className="basis-[32%] md:basis-[20%] lg:basis-[20%] xl:basis-[20%] sm:mt-[20px] md:mt-[60px] mb-[20px]">
             <div className="pl-[0px] sm:pl-[20px] md:mt-[100px]">
-              <p className="text-left font-bold text-[14px] sm:text-[16px]">Quick Links</p>
+              <p className="text-left font-bold text-[14px] sm:text-[16px]">
+                Quick Links
+              </p>
               <ul className="text-[14px] sm:text-[16px]">
                 <li className="my-[5px]">About Us</li>
                 <li className="my-[5px]">Contact Us</li>
@@ -35,7 +37,9 @@ const Footer2 = () => {
           </div>
           <div className="basis-[32%] md:basis-[20%] lg:basis-[20%] xl:basis-[20%] sm:mt-[20px] md:mt-[60px] mb-[20px]">
             <div className="pl-[0px] sm:pl-[20px] md:mt-[100px]">
-              <p className="text-left font-bold text-[14px] sm:text-[16px]">Quick Links</p>
+              <p className="text-left font-bold text-[14px] sm:text-[16px]">
+                Quick Links
+              </p>
               <ul className="text-[14px] sm:text-[16px]">
                 <li className="my-[5px]">Review</li>
                 <li className="my-[5px]">Privacy</li>
@@ -46,12 +50,30 @@ const Footer2 = () => {
           </div>
           <div className="basis-[32%] md:basis-[20%] lg:basis-[20%] xl:basis-[20%] sm:mt-[20px] md:mt-[60px] mb-[20px]">
             <div className="pl-[0px] sm:pl-[20px] md:mt-[100px]">
-              <p className="text-left font-bold text-[14px] sm:text-[16px]">Get Social</p>
+              <p className="text-left font-bold text-[14px] sm:text-[16px]">
+                Get Social
+              </p>
               <ul className="text-[14px] sm:text-[16px]">
-                <li className="my-[5px]">Facebook</li>
-                <li className="my-[5px]">Youtube</li>
-                <li className="my-[5px]">Twitter</li>
-                <li className="my-[5px]">LinkedIn</li>
+                <li className="my-[5px] w-[40px]">
+                  <a href="">
+                    <img src="../homePage/facebook.png" alt="facebook" className="w-[30px]"></img>
+                  </a>
+                </li>
+                <li className="my-[5px] w-[40px]">
+                  <a href="">
+                    <img src="../homePage/instagram.png" alt="instagram" className="w-[30px]"></img>
+                  </a>
+                </li>
+                <li className="my-[5px] w-[40px]">
+                  <a href="">
+                    <img src="../homePage/linkedin.png" alt="linkedin" className="w-[30px]"></img>
+                  </a>
+                </li>
+                <li className="my-[5px] w-[40px]">
+                  <a href="">
+                    <img src="../homePage/youtube.png" alt="youtube" className="w-[30px]"></img>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -85,10 +107,26 @@ const Footer2 = () => {
           <div className="pl-[20px] md:mt-[100px]">
             <p className="text-left font-bold text-[16px]">Lets Get Social</p>
             <ul className="">
-              <li className="my-[5px]">Facebook</li>
-              <li className="my-[5px]">Youtube</li>
-              <li className="my-[5px]">Twitter</li>
-              <li className="my-[5px]">LinkedIn</li>
+              <li className="my-[5px] w-[50px]">
+                <a href="">
+                  <img src="../homePage/facebook.png" alt="facebook"></img>
+                </a>
+              </li>
+              <li className="my-[5px] w-[50px]">
+                <a href="">
+                  <img src="../homePage/instagram.png" alt="instagram"></img>
+                </a>
+              </li>
+              <li className="my-[5px] w-[50px]">
+                <a href="">
+                  <img src="../homePage/linkedin.png" alt="linkedin"></img>
+                </a>
+              </li>
+              <li className="my-[5px] pl-[4px] w-[50px]">
+                <a href="">
+                  <img src="../homePage/youtube.png" alt="youtube"></img>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
