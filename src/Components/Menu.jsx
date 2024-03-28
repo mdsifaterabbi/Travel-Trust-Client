@@ -35,7 +35,7 @@ const Menu = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/about"
                   className="bg-[#40b0fd] text-white hover:bg-[#40b0fd] hover:text-white rounded-none"
                 >
                   About Us
@@ -99,7 +99,7 @@ const Menu = () => {
                   </li>
                   <li>
                     <Link
-                      to="/contact"
+                      to="/about"
                       className="bg-[#40b0fd] text-white hover:bg-[#40b0fd] hover:text-white rounded-none"
                     >
                       About Us

@@ -1,11 +1,14 @@
+import AboutHero from "../Components/AboutComponents/AboutHero";
 import Menu from "../Components/Menu";
 
 const AboutPage = () => {
   return (
     <>
-      <div className="w-[90vw] border-[2px] border-red-500 mx-auto py-[10px]">
+      <div className="w-[98vw] mx-auto py-[10px] bg-[#ffffff]">
         <Menu />
-        <h>You are in about page of Travel Trust</h>
+      </div>
+      <div className="w-[98vw] mx-auto">
+        <AboutHero />
       </div>
     </>
   );
